@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
+
+    <link rel="stylesheet" href="icon/css/fontello.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+            font-family: "Kanit", serif;
+
+
+        }
+
+        main {
+            width: 100%;
+            height: 180vh;
+
+            >.myfoot {
+                width: 170px;
+                height: 170px;
+                position: fixed;
+                bottom: 15px;
+                right: 0;
+                z-index: 999;
+                /* border: 1px solid black; */
+
+
+                &:hover {
+
+                    >img,
+                    &::before {
+                        animation-play-state: paused;
+                    }
+
+                    >figcaption {
+                        top: -10px;
+                        opacity: 1;
+                    }
+
+                    >a {
+                        right: 100%;
+                        opacity: 1;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    display: flex;
+                    position: absolute;
+                    width: 145px;
+                    height: 145px;
+                    border-radius: 50%;
+                    bottom: 10px;
+                    right: 8px;;
+                    background-color: #20496aa0;
+                    animation: foot1 linear infinite alternate 6s;
+
+                }
+
+                >img {
+                    width: 125px;
+                    height: 125px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    animation: foot2 linear infinite alternate 6s;
+                    position: absolute;
+                    bottom: 18px;
+                    right: 16px;
+                    z-index: 999;
+                }
+
+                >a {
+
+                    position: absolute;
+                    right: 100px;
+                    z-index: 99;
+                    right: 50%;
+                    font-size: 30px;
+                    color:  #20496a;
+                    transition: .4s;
+                    opacity: 0;
+
+                    &:nth-of-type(1) {
+                        top: 0;
+                        font-size: 28px;
+                    }
+
+                    &:nth-of-type(2) {
+                        top: 28%;
+                        font-size: 28px;
+                        transition-delay: .1s;
+                    }
+
+                    &:nth-of-type(3) {
+                        top: 56%;
+                        font-size: 31px;
+                        transition-delay: .2s;
+                    }
+
+                    &:nth-of-type(4) {
+                        top: 84%;
+                        font-size: 22px;
+                        transition-delay: .3s;
+
+                    }
+
+
+
+                }
+
+                >figcaption {
+                    width: 100%;
+                    position: absolute;
+                    text-align: center;
+                    color: #20496a;
+                    text-transform: capitalize;
+                    top: 0;
+                    z-index: 90;
+                    transition: .4s;
+                    font-weight: bold;
+                    transition-delay: .2s;
+                    opacity: 0;
+                }
+            }
+
+
+            >.box {
+                background-image: url(img/bg.jpg);
+                background-size: cover;
+                width: 100%;
+                height: 100vh;
+                position: relative;
+                animation: five .2s linear forwards;
+                animation-timeline: scroll();
+
+                &::before {
+                    content: '';
+                    display: flex;
+                    position: absolute;
+                    width: 100%;
+                    height: 300px;
+                    bottom: -65px;
+                    left: 0;
+                    background: linear-gradient(to top, #fff 18%, transparent);
+                    z-index: 50;
+                }
+
+                >h2 {
+                    font-size: 180px;
+                    /* font-weight: bold; */
+                    color: white;
+                    position: absolute;
+                    z-index: 15;
+                    text-transform: capitalize;
+                    top: 260px;
+                    left: 310px;
+                    animation: four .2s linear forwards;
+                    animation-timeline: scroll();
+                }
+
+                >img {
+                    position: absolute;
+
+                    &:nth-of-type(1) {
+                        height: 100vh;
+                        width: 100%;
+                        bottom: 0;
+                        left: 0;
+                        z-index: 30;
+                        animation: one .2s linear forwards;
+                        animation-timeline: scroll();
+                    }
+
+                    &:nth-of-type(2) {
+                        height: 100vh;
+                        width: 100%;
+                        bottom: 0;
+                        right: 0;
+                        z-index: 30;
+                        animation: two .2s linear forwards;
+                        animation-timeline: scroll();
+                    }
+
+                    &:nth-of-type(3) {
+                        width: 100%;
+                        height: 700px;
+                        object-fit: cover;
+                        bottom: 0;
+                        right: 10px;
+                        z-index: 20;
+                        animation: three .2s linear forwards;
+                        animation-timeline: scroll();
+                    }
+
+                    &:nth-of-type(4) {
+                        position: absolute;
+                        top: -250px;
+                        right: 25px;
+                        z-index: 20;
+                        animation: two .1s linear forwards;
+                        animation-timeline: scroll();
+                    }
+
+                    &:nth-of-type(5) {
+                        position: absolute;
+                        top: -280px;
+                        left: -65px;
+                        z-index: 20;
+                        animation: one .1s linear forwards;
+                        animation-timeline: scroll();
+                    }
+                }
+            }
+
+
+            >.box1 {
+                width: 100%;
+                height: 500px;
+                position: absolute;
+                z-index: 30;
+                background: linear-gradient(to top, #fff 97%, transparent);
+                padding: 50px;
+
+                >h2 {
+                    font-size: 90px;
+                    color: #20496a;
+                    top: 100px;
+                    padding-left: 45px;
+
+                }
+
+                >p {
+                    font-size: 28px;
+                    padding: 45px;
+                    color: rgba(0, 0, 0, 0.743);
+                }
+
+                >footer {
+                    width: 100%;
+                    height: 80px;
+                    /* border: 1px solid black; */
+                    position: absolute;
+                    bottom: -90px;
+                    left: 0;
+                    display: flex;
+                    justify-content: space-around;
+                    align-items: center;
+                    background-color: #b0dfea;
+                    padding-inline: 110px;
+
+                    a{
+                        transition: .4s;
+                        &:hover{
+                            scale: 1.4;
+                            transform: translateY(-5px);
+
+                        }
+                    }
+
+
+                }
+
+
+            }
+        }
+
+
+        @keyframes one {
+            to {
+                transform: translateX(-500px);
+            }
+        }
+
+        @keyframes two {
+            to {
+                transform: translateX(500px);
+            }
+        }
+
+        @keyframes three {
+            to {
+                transform: translateY(270px);
+
+            }
+        }
+
+        @keyframes four {
+            to {
+                transform: translateY(400px);
+
+            }
+        }
+
+        @keyframes five {
+            to {
+                opacity: .7;
+
+            }
+        }
+
+        @keyframes foot1 {
+            0% {
+                border-radius: 37% 63% 41% 59% / 56% 34% 66% 44%;
+            }
+
+            50% {
+                border-radius: 64% 36% 63% 37% / 37% 59% 41% 63%;
+            }
+
+            100% {
+                border-radius: 30% 70% 51% 49% / 62% 41% 59% 38%;
+            }
+        }
+
+        @keyframes foot2 {
+            0% {
+                border-radius: 30% 70% 51% 49% / 62% 41% 59% 38%;
+            }
+
+            50% {
+                border-radius: 37% 63% 41% 59% / 56% 34% 66% 44%;
+            }
+
+            100% {
+                border-radius: 64% 36% 63% 37% / 37% 59% 41% 63%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <section class="box">
+            <h2>mountains</h2>
+            <img src="img/mountain_left.png" alt="">
+            <img src="img/mountain_right.png" alt="">
+            <img src="img/man.png" alt="">
+            <img src="img/clouds_1.png" alt="">
+            <img src="img/clouds_2.png" alt="">
+        </section>
+        <section class="box1">
+            <h2>welcome to the mountains</h2>
+            <p>Welcome to the mountain, where the air is crisp, the views are breathtaking, and nature’s beauty
+                stretches as far as the eye can see. Whether you’re here for adventure or solitude, the towering peaks
+                and winding trails offer something for everyone. Feel the rush of the wind as you hike through rugged
+                terrain, listen to the peaceful whispers of the trees, and watch the sun paint the sky in hues of gold
+                and crimson. This is a place where the soul finds peace, the body finds strength, and every step leads
+                to a new discovery.</p>
+            <footer>
+                <a href="">
+                    <span class="material-symbols-outlined">
+                        filter_hdr
+                    </span>
+                </a>
+
+                <a href="">
+                    <span class="material-symbols-outlined">
+                        home
+                    </span>
+                </a>
+
+                <a href="">
+                    <span class="material-symbols-outlined">
+                        hiking
+                    </span>
+                </a>
+
+                <a href="">
+                    <span class="material-symbols-outlined">
+                        groups
+                    </span>
+                </a>
+
+                <a href="">
+                    <span class="material-symbols-outlined">
+                        settings
+                    </span>
+                </a>
+
+
+            </footer>
+        </section>
+
+        <figure class="myfoot">
+            <img src="img/ghazall.jfif" alt="">
+            <a href="https://www.linkedin.com/in/ghazaleh-nezamghadiri-06b626302/" target="_blank"><i
+                    class="icon-icons8-linkedin"></i></a>
+            <a href="https://github.com/GhazalehNezamghadiri" target="_blank"><i class="icon-icons8-github"></i></a>
+            <a href="https://www.instagram.com/ghazale.ghadiri/?hl=en" target="_blank"><i class=" icon-icons8-instagram"></i></a>
+            <a href="mailto:ghazalehghadiri2@gmail.com" target="_blank"><i class="icon-mail"></i></a>
+            <figcaption>ghazaleh ghadiri</figcaption>
+
+        </figure>
+
+
+    </main>
+
+</body>
+
+</html>
