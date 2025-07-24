@@ -1,4 +1,4 @@
-# Mountain parallax
+# Mountain 
 
 -[Demo Project](https://ghazalehnezamghadiri.github.io/mountain/index4.html)
 
