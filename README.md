@@ -1,10 +1,12 @@
 # Mountain 
 
+## Built a parallax scrolling page where mountains move as you scroll — simple but magical
+
 -[Demo Project](https://ghazalehnezamghadiri.github.io/mountain/index4.html)
 
 -Developed by Ghazaleh Nezamghadiri
 
--Created - 2025-01-03
+-Created - 2025-01-15
 
 -Technologies Used : Html , css , 
 
